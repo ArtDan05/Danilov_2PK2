@@ -1,4 +1,6 @@
-﻿namespace ConsoleApp1
+﻿using System.Runtime.CompilerServices;
+
+namespace ConsoleApp1
 {
     internal class Program
     {
@@ -13,9 +15,11 @@
 
             Subject biology = new Subject("Биология", 52);
             Subject math = new Subject("Математика", 100);
+            Subject rulang = new Subject("Русский язык", 100);
 
             biology.AddTask("Тема");
             math.AddTask("Тема");
+            rulang.AddTask("Тема");
 
             Random r = new();
 
@@ -23,6 +27,7 @@
             {
                 student.AddMark(biology, "Тема", r.Next(0, 6));
                 student.AddMark(math, "Тема", r.Next(0, 6));
+                student.AddMark(rulang, "Тема", r.Next(0, 6));
             }
         }
     }
