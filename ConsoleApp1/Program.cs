@@ -12,17 +12,17 @@
             gr1.AddStudent(stud2);
 
             Subject biology = new Subject("Биология", 52);
-            Subject meth = new Subject("Математика", 100);
+            Subject math = new Subject("Математика", 100);
 
             biology.AddTask("Тема");
-            meth.AddTask("Тема");
+            math.AddTask("Тема");
 
             Random r = new();
 
             foreach (Student student in gr1.Students)
             {
                 student.AddMark(biology, "Тема", r.Next(0, 6));
-                student.AddMark(meth, "Тема", r.Next(0, 6));
+                student.AddMark(math, "Тема", r.Next(0, 6));
             }
         }
     }
